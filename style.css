@@ -180,7 +180,6 @@ button:hover {
   background: #191919;
   border-radius: 20px;
   margin: 15px;
-  position: relative;
   overflow: hidden;
   text-align: center;
 }
@@ -295,4 +294,31 @@ footer p:nth-child(2) {
   color: #f9004d;
   bottom: 35px;
   font-size: 14px;
+}
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #5f4d4d;
+  padding: 20px;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
 }

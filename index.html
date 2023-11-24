@@ -33,7 +33,9 @@
         <h3>Im a Web-developer.</h3>
         <div class="newslatter">
           <form>
-            <a href="email-form.html" target="_blank"><button type="button" id="cntactBtn">contact me</button></a>
+            <a href="email-form.html" target="_blank"
+              ><button type="button" id="cntactBtn">contact me</button></a
+            >
           </form>
         </div>
       </div>
@@ -53,7 +55,7 @@
             developers focus on the user-facing side of their work, while
             back-end developers make websites functional and secure.
           </p>
-          <button type="button">Lets talk</button>
+          <button onclick="redirectToGmail()" type="button">Lets talk</button>
         </div>
       </div>
     </section>
@@ -64,45 +66,94 @@
 
       <div class="box">
         <div class="card">
-          <i class="fa-solid fa-bars"></i>
+          <i
+            ><img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB1UlEQVR4nO2ZsU7DMBRFrwRiZoKKkYHPgIGJ4lfE0C9gg34HhRl+hYUBvqBSB9TC3nZBYqGovmUIslQJqQRiO3aTllzpTXmO78lznh0FqFRSJWhuEOqaUCNCknKHGhLqynj+AWIuFG9QXKOdBrIElZD5yoxSQIo25Rf4VyAomViBlEysKuKgMeq1CdSFbb7JNWNKVZEx6jVC+mbMBNLKhpDWbI6+CwxjgrxDtjXU02yDev5AYyd7zOnW9xh5sRkTFcQHIg8MY4DkgfCFYWiQEBA+MAwJEhLCFYahQGJAuMAwBIiZiJCeT9v0aeOE9MycFQj/XFp+/d9GNsuWYV/28DC27x7Dt99wMC4NhHE2xPwwrl2Q8Y4o/jA+rZxxD43uML77EWOCrMwxfqU+rBYlViAlE/99RbgEAZuyLSmIGhZtiu4xSKtIuwTGErdQl7/8ejMwS1GZgYFI/fVWaU62TxWLVoKTTQ3p2BpzBcnK05CO8ZATorlGyF1IY3756j7Bwbo3CCG3cYy55xPqxhfizKWT5HhY1nNMoc6dbj5FY19DsWwgGvI5gTq0uvEEx7sa8uoywSJDQ940jvYyQTSkW7RZZsN0bUr9WLRRZoZ6sFpelVCcvgCCIfWvVLKM0QAAAABJRU5ErkJggg=="
+          /></i>
           <h5>Web Development</h5>
           <div class="pra">
             <p>
               every website should have two main goals; first, being fast and
               the second one is to be user-friendly
             </p>
-
-            <p style="text-align: center">
-              <a href="#" class="button">Read more</a>
-            </p>
+            <button class="popup-button">Read more</button>
+            <div class="popup-container">
+              <div class="popup-content">
+                <span class="close-button">&times;</span>
+                <p style="font: size 18px; font-weight: bold">
+                  Web Development as a Service (WDaaS) offers a comprehensive
+                  solution for website creation and maintenance. This approach
+                  has several benefits:<br />
+                  1_Scalability: WDaaS allows your website to scale effortlessly,
+                  accommodating growth and changes in user traffic. This ensures
+                  a seamless user experience as your site expands.<br />
+                  2_Efficiency: With WDaaS, you can leverage the expertise of
+                  professional developers who handle the technical aspects,
+                  allowing you to focus on your business. This enhances the
+                  efficiency of your web development processes.<br />
+                  3_Cost-effectiveness: Outsourcing web development can lead to
+                  cost savings, as you pay for the specific services you need.
+                  This eliminates the need for in-house development teams and
+                  associated overhead costs.
+                </p>
+                <i
+                  ><img
+                    src="data:image/png;base64,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"
+                /></i>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card">
-          <i class="fa-solid fa-user"></i>
-          <h5>Web Development</h5>
+          <i
+            ><img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEu0lEQVR4nO1ZWYgcZRD+XNcNCoJB4oHB2wcTr3gL6j4pw3ZVbwKOGNTg05o38caLXZIX8XgSfVHzotEHXzwwnhAFNaIRsgZP0MSo4HpslN3ZqZpVWsq/2+6ZTbb/cXunO5iCH2b6/7uqvr/qr7+qGlgARRg5rIXgYkWwTsEbBfS8gLYp6EsFfyfgSQHPxmPSntmcrbG1CtqgoBuNh/FCL0nB5wj4XgW9KeBpBUdFjJjXGwK+RzF89qIoHyE8sgVaL6CPi1LcA9hHJtNkFwBgsL8FHlHQT70CoHMA0a8CvjtCfeA/gRAEZwh4Z1kAdK6FdjbBp3cFooXwSgH/Vrbyug/rmG5eIJpYfZqAfi9bad0/mL1N8CkeLkXPla2s5rvZsz5A9h4AQCb/T0B4c/WB0DO5QJoITq3+YR8+GT7UQnCFhboKutQvLdDlXiCmwMdmwvB4hUDsMJ2yOs5LCvpWEK5IUxRar6CJ8kDQhMu5BvudfrxSQbs8gLhMVEC3RagfmiaNPCKgD3t4FraZzCRpNCACukPADZv3ApJhNq4I6xFG+zLzKwV8l4JeE9BUgYobry0CujPxCAdgtE/B1wro0+z6roBkxlcmoIHghOxa53rhhYrgegWPWegW8AcK/tzM7worarlhhRXtsjlbE4f5MXvXeCSuk1ADteVuw/jrfemEPMrZtb8E/I6A7muBL+0UvhCKz+NlArpfQO+arPl0yWXYTdUn4KaAtwvoKQHfrgivs/BoJUCE2rIIwdIIOMQN+11bZnO2RsFrnc/T044HN7txw1wgCnqlvAjFvpHsJd+a3Ht3ej0ENKMIzvLyV0EYFtlYKA4E27XAXiDMn51lhs6zy7Fs5TUd3yiCc7M65rnWCxHqh7sX6gOC8JYyU3tx98tYqlNtiVdhFZtwuyJclVpp9dECurWXuZeAxk2myU51o/MF/InNewGJwcwq6LEZ0Int8+EqAT+g4LeTdKEg/28o6C27R8ytszJnMHSSgB8X0J/Jem8gmZ2xW3lzE3xVknullqoPtBBe4lqmtMHqff+b3XoD1jIN1hmPzr5VhMH+JujqmOdsp15dA2kfNCHgJy2t6ExXiqAGassVfIPJEPDP8+mSy6xLd/lewa8r6BHXUg1D211r17ibPFia8E3+25ylN26tlQj8qPV8Y16RrxvmArGstqwIpf7j1VwgLQQXCEgroGy0H2tINqLmWCWsVzFNEdCMILjGC0RqGbpIQXvKVl7/HbTH6hZvAALelITCCHSEtfQF/EeJrjStoAc7St4nPNzqHxO+Jxg6M3k2hTXHGCB3P/TMAp9ZhWiy000OVwjofZv3AhKDsQP/0DSGjmt3OftmaCUqby3yHLn0nLcKaNTcOivTdFDww9kg5A0kY1qxCtCadtkmhDNzbYmVpwq+qf1jKH+h4N1zb3bebXPpx1DeaO8aD+OFNt6jffF3mk0uUrXr1TWQjvGD5TzW1ei0VBE0jTXHu46JyaAf59Mll1mXBZXt8BYze9z3YnM9S/LcTT58VMLXftszm7M1bi3dbO/Gl7DxKrJm55fLilDqHwhe9AFysGbXKtXsCVW5Zu+aqlizL4iqUrMXSmXU7ItOi1mzHyQc4PQ3+qHlAleXHmwAAAAASUVORK5CYII="
+          /></i>
+          <h5>Database management</h5>
           <div class="pra">
             <p>
-              every website should have two main goals; first, being fast and
-              the second one is to be user-friendly
+              Cloud Service Model: DMaaS is a cloud service providing
+              centralized storage for disparate data sources, covering the
+              entire data lifecycle.
             </p>
-
-            <p style="text-align: center">
-              <a href="#" class="button">Read more</a>
-            </p>
+            <button class="popup-button">Read more</button>
+            <div class="popup-container">
+              <div class="popup-content">
+                <span class="close-button">&times;</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Nostrum et, praesentium iure dolores mollitia laborum ratione
+                  libero sed architecto aperiam voluptatem earum accusantium
+                  reprehenderit eveniet ex error optio. Excepturi, commodi!
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card">
-          <i class="fa-regular fa-bell"></i>
-          <h5>Web Development</h5>
+          <i
+            ><img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADBElEQVR4nO1aS2tTQRT+6gPxVRWtIFSwWsGFgoKIrtSFcjHnJO0i7lwJCu7UH9Cubbso1pULHwt1oytRfFUEFVRwoQuhFQUFgyCIj/TOXAsjJ5lrglJIcmdumtgDQ28C/b75cu6cOd/cC8xFG4RBfn4EOq7AzxVoSoNNkqFAkQa91eCRH+hfm5KIzCoFepR08jMP+hwhs8uziIF5Gnzfnwj+I8ZrZjToiH8RHIsZ9ibE7y31j5BJj0L4W1pCFCjyJmQm0tmK+98KGUqOS8NNFaJAV6QkJ8U1QIcCXWiSEHpgECxyhW1wbKEG3U5ViAK9MMgvc41vQEsU+GlaQiYMgi77+XARQXdS3Cnk1gsWSmKCLuHwLaQQIrNRrhWIFWhagz4Y5Fc0iin/KxiCpUAs3wmHcMFXaBzaLn8j0B4FLtoMDSbFVaCB8i3LRcGu5vIWIbhXmjpLfN4VrgadtevviwJtgc/4if51GvTeVq2bBnsXuPQ4GnTdZvmjrBtX2H8RBZ0K9NJm4pnBgaXuOfKLFeix5XhtkFvpmKBU4+/GXalPr2DQt1qD39jMPHS2V5V3Xb5sRXwKkdsAz1FE0C2VzGbmmovuQUruiF2E3zWyO5zMtCbezFYF+mrFnEsEpsCnY28Qgg4i5QiR2afAys7hVIMg3FPe8Er36iiaFBo8aoVMy5waAolAJ5qbkez+qoycbNE1ktsWrxEXnieuWpfSrFohuEe47A941UnVquwjfCf9fYTGXXoeS5BdntLO/sRm4pXznT29XotvWOx3woXW7H55LLXuN65a1X5EvERyXB6s+BHeXc3Vgg6Rf6XoEMuePa5a4rNd+IZyk5jNy7Vgp+HZ2+oUxbTNuZb2c9J4sdlnv2Mtf/ar2+w03sxW3LoJfQ34irZ59KZsZ1r7oMkQfZtkyHWdYia8CdHgo40+Yo6dZh3jjOcXBmi8voxwr0Jms31Fo1YRhfjRhUcxQacG3/K4PgoRsju9iqiIQYc0eRp0z0UBKL9UU2oUhwxoTSoi5gJ+4ze4Mo8b6R4F4AAAAABJRU5ErkJggg=="
+          /></i>
+          <h5>Mobile app development</h5>
           <div class="pra">
             <p>
-              every website should have two main goals; first, being fast and
-              the second one is to be user-friendly
+              Mobile app development is the process of creating software for
+              mobile devices, involving coding, design, and deployment of
+              applications for smartphones and tablets
             </p>
-
-            <p style="text-align: center">
-              <a href="#" class="button">Read more</a>
-            </p>
+            <button class="popup-button">Read more</button>
+            <div class="popup-container">
+              <div class="popup-content">
+                <span class="close-button">&times;</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+                  veritatis adipisci, eveniet, accusantium natus, quidem numquam
+                  incidunt non tenetur odit quo temporibus porro? Dolore rerum
+                  odio temporibus asperiores distinctio perferendis!.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

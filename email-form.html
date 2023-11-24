@@ -8,13 +8,13 @@
   </head>
   <body>
     <div class="container">
-      <form onsubmit="sendEmail()">
+      <form onsubmit="sendEmail()" id="form">
         <h3>Get in touch</h3>
-        <input type="text"  id="name" placeholder="Your Name" required>
-        <input type="email"  id="email" placeholder="Email address" required>
-        <input type="text"  id="phone" placeholder="Phone number" required>
-        <textarea id="message"  rows="4" placeholder="write your requested project type for me please"></textarea>
-        <button type="submit">Submit</button>
+        <input type="text"  id="name" id="key" placeholder="Your Name" required>
+        <input type="email"  id="email" id="value" placeholder="Email address" required>
+        <input type="text"  id="phone"  placeholder="Phone number" required>
+        <textarea id="message"  rows="4"  placeholder="write your requested project type for me please"></textarea>
+        <button type="submit" id="submit" value="submit">Submit</button>
       </form>
     </div>
     <script src=" https://smtpjs.com/v3/smtp.js"></script>
