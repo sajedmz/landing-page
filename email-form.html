@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="email-form.css" />
+    <title>Email Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <form onsubmit="sendEmail(); reset(); return false">
+        <h3>Get in touch</h3>
+        <input type="text"  id="name" placeholder="Your Name" required>
+        <input type="email"  id="email" placeholder="Email address" required>
+        <input type="text"  id="phone" placeholder="Phone number" required>
+        <textarea id="message"  rows="4" placeholder="write your requested project type for me please"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script src="email-form.js"></script>
+  </body>
+</html>
